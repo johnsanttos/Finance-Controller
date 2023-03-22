@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Image } from 'react-native';
-import { Background, Container, Logo, AreaInput, Input, SubmitButton, 
-	SubmitText, Link, LinkText} from './styles';
+import { Background, Container, Logo, AreaInput, Input, SubmitButton,SubmitText, Link, LinkText} from './styles';
 
-export default function SignOut() {
+export default function SignUp() {
 	const[name, setName] = useState('')
 	const[email, setEmail] = useState('')
 	const[password, setPassword] = useState('')
@@ -11,10 +10,10 @@ export default function SignOut() {
 	return (
 		<Background>
 		<Container>
-		  <Image
+		  {/* <Image
 		   source={require('./financeLogo.jpg')}
 		   style={{ width: 400, height: 300}}
-		   />
+		   /> */}
 		     <AreaInput>
 			<Input
 			placeholder="nome"
@@ -47,12 +46,9 @@ export default function SignOut() {
 		  </AreaInput>
   
 		<SubmitButton>
-		  <SubmitText>Acessar</SubmitText>
+		  <SubmitText>Cadastrar</SubmitText>
 		</SubmitButton>
-  
-		<Link>
-		  <LinkText>Criar uma conta!</LinkText>
-		</Link>
+
   
 		</Container>
 	 </Background>
