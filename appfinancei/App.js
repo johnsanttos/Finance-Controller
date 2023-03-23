@@ -1,14 +1,16 @@
 
 import { View,Text, StatusBar} from "react-native";
-import firebase from "./src/services";
+import AuthProvider from "./src/context/auth";
 import { NavigationContainer } from "@react-navigation/native";
 import Routes from "./src/routes";
 
 export default function App (){
   return (
     <NavigationContainer >
-      <StatusBar backgroundColor="#fff" barStyle="dark-content"/>
+      <AuthProvider>
+      <StatusBar backgroundColor="#0000ff" barStyle="light-content"/>
       <Routes/>
+      </AuthProvider>
     </NavigationContainer>
   )
 }
